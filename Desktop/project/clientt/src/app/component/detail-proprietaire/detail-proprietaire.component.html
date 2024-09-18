@@ -1,0 +1,34 @@
+<div class="body-wrapper">
+  <div class="container-fluid">
+    <div class="card w-100">
+      <div class="card-body p-4">
+        <h5 class="card-title fw-semibold mb-4">Liste des Appartements</h5>
+        <div *ngIf="user">
+          <div *ngIf="user.appartements && user.appartements.length">
+            <table class="table text-nowrap mb-0">
+              <thead class="text-dark fs-4">
+              <tr>
+                <th class="border-bottom-0">Nom</th>
+                <th class="border-bottom-0">Adresse</th>
+                <th class="border-bottom-0">Frais_menage</th>
+                <!-- Ajoutez d'autres en-têtes si nécessaire -->
+              </tr>
+              </thead>
+              <tbody>
+              <tr *ngFor="let appartement of user.appartements">
+                <td>{{ appartement.name }}</td>
+                <td>{{ appartement.addresse }}</td>
+                <td>{{ appartement.frais_menage }} €</td>
+                <!-- Ajoutez d'autres colonnes si nécessaire -->
+              </tr>
+              </tbody>
+            </table>
+          </div>
+          <div *ngIf="!user.appartements || !user.appartements.length">
+            <p>Aucun appartement trouvé pour cet utilisateur.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

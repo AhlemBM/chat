@@ -1,0 +1,36 @@
+<aside class="left-sidebar">
+  <div>
+    <div class="brand-logo d-flex align-items-center justify-content-between">
+      <a routerLink="/" class="text-nowrap logo-img">
+        <img src="" width="180" alt="LOGO" /><p>LOGO</p>
+      </a>
+      <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
+        <i class="ti ti-x fs-8"></i>
+      </div>
+    </div>
+    <nav class="sidebar-nav scroll-sidebar" data-simplebar="">
+      <ul id="sidebarnav">
+
+        <!-- Afficher les éléments spécifiques à l'administrateur -->
+        <li *ngIf="isAdmin" class="sidebar-item">
+          <button class="sidebar-router btn" (click)="navigateTo('/liste-appartement')">
+            <i class="ti ti-home"></i>
+            <span class="hide-menu">Locations</span>
+          </button>
+        </li>
+        <li *ngIf="isAdmin" class="sidebar-item">
+          <button class="sidebar-router btn" (click)="navigateTo('/proprietaire')">
+            <i class="ti ti-user"></i>
+            <span class="hide-menu">Propriétaires</span>
+          </button>
+        </li>
+
+
+
+      </ul>
+      <div class="d-flex align-items-center justify-content-between px-4 py-2">
+        <button class="btn btn-primary w-100">Déconnexion</button>
+      </div>
+    </nav>
+  </div>
+</aside>
