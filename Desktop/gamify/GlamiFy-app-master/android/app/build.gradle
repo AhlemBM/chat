@@ -1,0 +1,60 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    id 'com.google.gms.google-services' // This should be last
+    id "dev.flutter.flutter-gradle-plugin"
+
+    /*
+    id "dev.flutter.flutter-plugin-loader" version "1.0.0"
+
+    THIS ->
+            id "com.android.application" version "8.7.0" apply false
+
+    id "org.jetbrains.kotlin.android" version "1.9.0" apply false
+    id "com.google.gms.google-services" version "4.4.1" apply false
+    id "com.google.firebase.crashlytics" version "3.0.0" apply false
+    id 'com.google.firebase.firebase-perf' version '1.4.2' apply false
+    id "com.huawei.agconnect" version "1.9.1.303" apply false*/
+}
+
+android {
+    namespace = "com.example.glamify_app"
+    compileSdk = flutter.compileSdkVersion
+    ndkVersion = "27.0.12077973"
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_17
+    }
+
+    defaultConfig {
+        applicationId = "com.example.glamify_app"
+        minSdk = 23
+        targetSdk = flutter.targetSdkVersion
+        versionCode = flutter.versionCode
+        versionName = flutter.versionName
+    }
+
+    buildTypes {
+        release {
+            signingConfig = signingConfigs.debug
+        }
+    }
+}
+
+dependencies {
+    // Firebase BOM for dependency management
+    implementation platform('com.google.firebase:firebase-bom:33.5.1') // Use the latest version
+    implementation 'com.google.firebase:firebase-auth' // Firebase Authentication
+    implementation 'com.google.android.gms:play-services-auth:21.2.0' // Google Sign-In
+
+    // Add other dependencies as needed
+}
+
+flutter {
+    source = "../.."
+}

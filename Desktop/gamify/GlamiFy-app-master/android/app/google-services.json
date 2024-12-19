@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "222835318245",
+    "firebase_url": "https://glamify-a14d5-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "glamify-a14d5",
+    "storage_bucket": "glamify-a14d5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:222835318245:android:dfb58b731cc5dc24f9e30c",
+        "android_client_info": {
+          "package_name": "com.example.glamify_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "222835318245-g6349naktu1tdcf6f3e2q3i35qr6ud1a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.glamify_app",
+            "certificate_hash": "82874ba197bc62e8068fbae58640d200431bdac7"
+          }
+        },
+        {
+          "client_id": "222835318245-s7bgt483n3b2dr2pb526aui3ndvfh58o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAEEPmID3AGwQVi_6rTaywEWECqC3G0XEs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "222835318245-s7bgt483n3b2dr2pb526aui3ndvfh58o.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "222835318245-tdm3t90f0a7j4caqpa2anp7ctsvqm0d5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.glamifyApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
